@@ -12,7 +12,7 @@ The code-snippet shows you how to:
 
 It does not:
 * Rely on "print" command / installed PDF Reader in Windows nor "lp" command on Linux
-* Describe how to adjust the print dialog
+* Describe how to adjust the print dialog to hide unsupported options
 * Show how to configure a printer in Qt to print without a print dialog
 * Support PageSelection, CurrentPage
 * Catch cancel actions, etc.
