@@ -1,5 +1,5 @@
 # Print existing PDF files with PyQT6 - Qt6
-Code-snippet that shows how to render and print existing PDF files with PyQt
+Code-snippet / Demo application that shows how to render and print existing PDF files with PyQt
 
 The code-snippet shows you how to:
 * Create a separate worker thread for printing in order to avoid an event loop timeout (hanging application) for long running print jobs 
