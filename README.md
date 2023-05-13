@@ -4,16 +4,18 @@ Code-snippet that shows how to render and print existing PDF files with PyQt
 The code-snippet shows you how to:
 * Create a separate worker thread for printing in order to avoid an event loop timeout (hanging application) for long running print jobs 
 * Open a print dialog
-* Render the PDF's pages to images
+* Render the PDF's pages to bitmap images
 * Adjust the images to fit into the available print area
 * "Paint" them on a QPainter
 * Report print progess back to your main application     
 
 It does not:
+* Rely on "print" command / installed PDF Reader in Windows nor "lp" command on Linux
 * Describe how to adjust the print dialog
-* Show how to configure a printer to print without a print dialog
+* Show how to configure a printer in Qt to print without a print dialog
 * Support PageSelection, CurrentPage
 * Catch cancel actions, etc.
+* Generate vector output if you print to PDF (all bitmap) 
 
 It uses code(-snippets) from:
 * https://realpython.com/python-pyqt-qthread/
