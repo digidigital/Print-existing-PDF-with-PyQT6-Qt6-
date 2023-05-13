@@ -21,6 +21,9 @@ It uses code(-snippets) from:
 * https://realpython.com/python-pyqt-qthread/
 * https://github.com/pypdfium2-team/pypdfium2
 
+Things to try:
+* Adjust the dpi-settings to a lower quality e.g. 200/72 if your print jobs take too long  
+
 ```
 #!/usr/bin/env python3
 # Tested with PyQt6.4.0, Python 3.10.6, Ubuntu 22.04
