@@ -11,6 +11,7 @@ The code-snippet shows you how to:
 
 It does not:
 * Describe how to adjust the print dialog
+* Show how to configure a printer to print without a print dialog
 * Support PageSelection, CurrentPage
 * Catch cancel actions, etc.
 
@@ -178,6 +179,7 @@ class Window(QMainWindow):
         self.stepLabel.setText(f"Print progress in %: {n}")
 
     def printFinished(self):
+        self.longRunningBtn.setEnabled(True)
         self.stepLabel.setText("Print progress in %: 0")     
         msgBox = QMessageBox()
         msgBox.setText("Printing completed")
@@ -202,9 +204,6 @@ class Window(QMainWindow):
 
         # Final resets
         self.longRunningBtn.setEnabled(False)
-        self.thread.finished.connect(
-            lambda: self.longRunningBtn.setEnabled(True)
-        )
         self.thread.finished.connect(self.printFinished)
 
 app = QApplication(sys.argv)
