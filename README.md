@@ -91,7 +91,7 @@ class printPdfWorker(QObject):
             renderer = pdf.render(
                 pdfium.PdfBitmap.to_pil,
                 page_indices = page_indices,
-                scale = 200/72,  # 200dpi resolution
+                scale = 300/72,  # 300dpi resolution
             )
             
             for i, pil_image, pageNumber in zip(page_indices, renderer, count(1)):
