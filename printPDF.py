@@ -73,7 +73,6 @@ class printPdfWorker(QObject):
             )
             
             for i, pil_image, pageNumber in zip(page_indices, renderer, count(1)):
-                QApplication.processEvents()
 
                 if pageNumber > 1:
                     self._printer.newPage()
