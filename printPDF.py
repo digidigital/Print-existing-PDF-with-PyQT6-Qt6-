@@ -85,7 +85,8 @@ class printPdfWorker(QObject):
                 # Rotate image if orientation is not the same as print format orientation
                 if (viewportRatio < 1 and imageRatio > 1) or (viewportRatio > 1 and imageRatio < 1): 
                     pil_image = pil_image.transpose(Image.ROTATE_90)
-                    pilWidth, pilHeight = pil_image.size                  
+                    pilWidth, pilHeight = pil_image.size    
+                    imageRatio = pilHeight/pilWidth
 
                 # Adjust drawing area to available viewport 
                 if viewportRatio > imageRatio:
