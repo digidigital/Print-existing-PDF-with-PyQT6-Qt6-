@@ -1,5 +1,5 @@
 # Print existing PDF files with PyQT6 - Qt6
-Code-snippet / Demo application that shows how to render and print existing PDF files with PyQt
+Code-snippet / Demo application that shows how to render and print existing PDF files with PyQt without blocking the event loop.
 
 The code-snippet shows you how to:
 * Create a separate worker thread for printing in order to avoid an event loop timeout (hanging application) for long running print jobs 
@@ -17,6 +17,8 @@ It does not:
 * Support PageSelection, CurrentPage
 * Catch cancel actions, etc.
 * Generate vector output if you print to PDF (all bitmap) 
+* Necessarily work with frozen applications (pyinstaller, cxfreeze, etc.) due to problems of "freezers" when it comes to freezing applications with multiple threads
+* No distinction is made between large and small pages - the content is enlarged or reduced until it fills the print area.
 
 It uses code(-snippets) from:
 * https://realpython.com/python-pyqt-qthread/
