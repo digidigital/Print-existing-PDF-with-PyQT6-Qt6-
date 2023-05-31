@@ -27,7 +27,7 @@ It uses code(-snippets) from:
 Things to try:
 * Adjust the dpi-settings to a lower quality e.g. 200/72 if your print jobs take too long  
 
-## Using pypdfium2
+## Using pypdfium2 and a separate thread
 ```
 #!/usr/bin/env python3
 # Tested with PyQt6.4.0, Python 3.10.6, Ubuntu 22.04
@@ -221,7 +221,7 @@ win.show()
 sys.exit(app.exec())
 ```
 
-## Using PyMuPDF
+## Using PyMuPDF and a separate thread
 ```
 #!/usr/bin/env python3
 # Tested with PyQt6.4.0, Python 3.10.6, Ubuntu 22.04
